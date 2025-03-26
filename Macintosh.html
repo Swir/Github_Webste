@@ -13,6 +13,7 @@
             --mac-white: #FFFFFF;
             --mac-black: #000000;
             --mac-bg: #FFFFFF;
+            --mac-text: #000000; /* Added explicit text color variable */
         }
         
         /* --- Reset i podstawowe style --- */
@@ -27,11 +28,12 @@
         @font-face {
             font-family: 'Chicago';
             src: url('https://cdn.jsdelivr.net/gh/codepo8/chicanery/fonts/ChicagoFLF.ttf') format('truetype');
+            font-display: swap; /* Improve font loading */
         }
         
         html, body {
             background-color: var(--mac-bg);
-            color: var(--mac-black);
+            color: var(--mac-text); /* Using explicit text color */
             font-family: 'Chicago', monospace;
             font-size: 12px;
             line-height: 1.4;
@@ -99,6 +101,7 @@
             display: flex;
             align-items: center;
             height: 100%;
+            color: var(--mac-black); /* Ensure menu text is black */
         }
         
         .mac-menu-item:hover {
@@ -129,6 +132,7 @@
             font-size: 11px;
             cursor: pointer;
             white-space: nowrap;
+            color: var(--mac-black); /* Ensure submenu text is black */
         }
         
         .mac-submenu-item:hover {
@@ -187,6 +191,7 @@
             position: absolute;
             left: 0;
             pointer-events: none;
+            color: var(--mac-black); /* Ensure title text is black */
         }
         
         .mac-close-box {
@@ -245,6 +250,7 @@
             overflow: auto;
             height: 100%;
             width: calc(100% - 16px); /* Make room for scrollbar */
+            color: var(--mac-black); /* Ensure content text is black */
         }
         
         /* --- Icons Grid --- */
@@ -292,6 +298,7 @@
             max-width: 70px;
             font-size: 9px;
             word-wrap: break-word;
+            color: var(--mac-black); /* Ensure icon label is black */
         }
 
         /* --- Toolbar --- */
@@ -313,6 +320,7 @@
             font-size: 9px;
             min-width: 50px;
             text-align: center;
+            color: var(--mac-black); /* Ensure button text is black */
         }
         
         .mac-button:active {
@@ -327,6 +335,8 @@
             width: 150px;
             font-size: 9px;
             font-family: 'Chicago', monospace;
+            color: var(--mac-black); /* Ensure search text is black */
+            background-color: var(--mac-white); /* Ensure search background is white */
         }
         
         .mac-search:focus {
@@ -441,6 +451,7 @@
         
         .mac-detail-content {
             padding: 10px;
+            color: var(--mac-black); /* Ensure detail content is black */
         }
         
         .mac-detail-header {
@@ -449,6 +460,7 @@
             margin-bottom: 8px;
             border-bottom: 1px solid var(--mac-black);
             padding-bottom: 3px;
+            color: var(--mac-black); /* Ensure header text is black */
         }
         
         .mac-detail-row {
@@ -460,10 +472,12 @@
         .mac-detail-label {
             width: 100px;
             font-weight: bold;
+            color: var(--mac-black); /* Ensure label text is black */
         }
         
         .mac-detail-value {
             flex: 1;
+            color: var(--mac-black); /* Ensure value text is black */
         }
         
         .mac-detail-description {
@@ -472,6 +486,7 @@
             border: 1px solid var(--mac-black);
             background-color: var(--mac-white);
             font-size: 9px;
+            color: var(--mac-black); /* Ensure description text is black */
         }
         
         .mac-button-row {
@@ -496,6 +511,7 @@
             font-size: 11px;
             cursor: pointer;
             white-space: nowrap;
+            color: var(--mac-black); /* Ensure context menu text is black */
         }
         
         .mac-context-item:hover {
@@ -539,6 +555,7 @@
         .mac-dialog-message {
             flex: 1;
             font-size: 11px;
+            color: var(--mac-black); /* Ensure dialog message is black */
         }
         
         .mac-dialog-buttons {
@@ -559,6 +576,7 @@
             font-family: 'Chicago', monospace;
             font-size: 11px;
             padding: 1px 10px;
+            color: var(--mac-black); /* Ensure dialog button text is black */
         }
         
         .mac-dialog-button.default {
@@ -605,6 +623,7 @@
             font-family: 'Chicago', monospace;
             text-align: center;
             font-size: 12px;
+            color: var(--mac-black); /* Ensure startup text is black */
         }
 
         /* --- Loading Indicator --- */
@@ -620,6 +639,7 @@
             font-family: 'Chicago', monospace;
             margin-bottom: 10px;
             font-size: 11px;
+            color: var(--mac-black); /* Ensure loading text is black */
         }
         
         .mac-watch {
@@ -652,16 +672,22 @@
             padding: 2px 5px;
             border-bottom: 1px solid var(--mac-black);
             font-weight: bold;
+            color: var(--mac-black); /* Ensure table header is black */
         }
         
         .mac-list-view td {
             padding: 2px 5px;
             border-bottom: 1px solid var(--mac-black);
+            color: var(--mac-black); /* Ensure table cell is black */
         }
         
         .mac-list-view tr.selected {
             background-color: var(--mac-black);
             color: var(--mac-white);
+        }
+        
+        .mac-list-view tr.selected td {
+            color: var(--mac-white); /* Ensure selected row text is white */
         }
         
         /* --- Alert & Note Icons --- */
@@ -699,6 +725,17 @@
                 width: 100%;
                 margin-top: 3px;
                 order: 10;
+            }
+        }
+
+        /* Fix for mobile devices */
+        @media (hover: none) {
+            .mac-menu-item:hover .mac-submenu {
+                display: none;
+            }
+            
+            .mac-menu-item.active .mac-submenu {
+                display: block;
             }
         }
     </style>
@@ -819,16 +856,16 @@
             <div class="mac-window-body">
                 <div class="mac-content" style="text-align: center; padding: 20px;">
                     <div class="mac-happy-mac" style="margin: 0 auto 20px;"></div>
-                    <div style="font-family: 'Chicago', monospace; font-size: 14px; margin-bottom: 5px;">
+                    <div style="font-family: 'Chicago', monospace; font-size: 14px; margin-bottom: 5px; color: var(--mac-black);">
                         GitHub Browser
                     </div>
-                    <div style="font-size: 9px; margin-bottom: 15px;">
+                    <div style="font-size: 9px; margin-bottom: 15px; color: var(--mac-black);">
                         Version 1.0
                     </div>
-                    <p style="margin-bottom: 10px; font-size: 9px;">
+                    <p style="margin-bottom: 10px; font-size: 9px; color: var(--mac-black);">
                         A classic Macintosh style interface for browsing GitHub repositories.
                     </p>
-                    <p style="font-size: 9px;">© 2025 Swir</p>
+                    <p style="font-size: 9px; color: var(--mac-black);">© 2025 Swir</p>
                 </div>
             </div>
         </div>
@@ -952,10 +989,45 @@
             initializeDragAndDrop();
             initializeKeyboardShortcuts();
             initializeScrollbar();
+            initializeMobileMenu();
 
             // Modal overlay closes modals
             document.getElementById('modal-overlay').addEventListener('click', closeAllModals);
         });
+
+        // Initialize Mobile Menu Support
+        function initializeMobileMenu() {
+            if (window.matchMedia('(hover: none)').matches) {
+                document.querySelectorAll('.mac-menu-item').forEach(item => {
+                    item.addEventListener('click', function(e) {
+                        // Don't toggle if clicking a submenu item
+                        if (e.target.classList.contains('mac-submenu-item')) {
+                            return;
+                        }
+                        
+                        // Clear active class from all menu items
+                        document.querySelectorAll('.mac-menu-item').forEach(el => {
+                            if (el !== this) el.classList.remove('active');
+                        });
+                        
+                        // Toggle active class on clicked item
+                        this.classList.toggle('active');
+                        
+                        // Prevent event bubbling
+                        e.stopPropagation();
+                    });
+                });
+                
+                // Close menu when clicking elsewhere
+                document.addEventListener('click', function(e) {
+                    if (!e.target.closest('.mac-menu-item')) {
+                        document.querySelectorAll('.mac-menu-item').forEach(el => {
+                            el.classList.remove('active');
+                        });
+                    }
+                });
+            }
+        }
 
         // Initialize Window Controls
         function initializeWindowControls() {
@@ -1450,10 +1522,10 @@
                 reposContainer.innerHTML = `
                     <div style="text-align: center; padding: 40px;">
                         <div class="mac-dialog-icon mac-alert-icon" style="margin: 0 auto 10px;"></div>
-                        <div style="font-family: 'Chicago', monospace; margin-bottom: 10px;">
+                        <div style="font-family: 'Chicago', monospace; margin-bottom: 10px; color: var(--mac-black);">
                             Sorry, a problem occurred.
                         </div>
-                        <div style="font-size: 9px;">
+                        <div style="font-size: 9px; color: var(--mac-black);">
                             ${error.message}
                         </div>
                     </div>

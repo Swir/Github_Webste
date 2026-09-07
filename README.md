@@ -2,66 +2,71 @@
 
 # 🕹️ GitHub Website — Retro UI Collection
 
-**Interactive retro-styled web interfaces inspired by classic computers and operating systems**  
-**Interaktywna kolekcja stron inspirowanych klasycznymi komputerami i systemami operacyjnymi**
+### Standalone HTML Interfaces Inspired by Classic Computers & Operating Systems
+
+**Atari • Macintosh • Commodore 64 • Windows 3.11 • Windows 95**
 
 ![HTML5](https://img.shields.io/badge/HTML5-Standalone-E34F26?logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-Embedded-1572B6?logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-Interactive-F7DF1E?logo=javascript&logoColor=black)
+![Build](https://img.shields.io/badge/Build-Not%20Required-success)
 
 </div>
 
 ---
 
-## 🇵🇱 Polski
+## 🚀 About
 
-To repozytorium zawiera zestaw samodzielnych stron HTML stylizowanych na klasyczne środowiska komputerowe. Każdy plik jest osobnym eksperymentem UI i może być uruchomiony bez budowania projektu czy instalowania zależności.
+**GitHub Website — Retro UI Collection** is a set of standalone web pages inspired by classic computer platforms and operating-system interfaces. Each HTML file is an independent visual experiment that can be opened directly in a modern browser without installing packages or running a build process.
 
-### 🖥️ Dostępne motywy
-- `Atari.html`
-- `Macintosh.html`
-- `comodore64.html`
-- `windows3.11.html`
-- `windows95.html`
+It is designed for users searching for **retro HTML UI**, **Windows 95 web interface**, **Windows 3.11 CSS**, **Commodore 64 website design**, **Atari HTML interface** or classic Macintosh-inspired frontend experiments.
 
-Projekt `windows95.html` odtwarza charakterystyczny wygląd Windows 95 i zawiera interaktywne elementy interfejsu w stylu retro.
+---
 
-### 🚀 Uruchomienie
-Najprościej otworzyć wybrany plik `.html` bezpośrednio w nowoczesnej przeglądarce.
+## 🖥️ Available Themes
 
-Możesz też uruchomić prosty serwer lokalny:
+| File | Theme |
+|---|---|
+| `Atari.html` | Atari-inspired interface |
+| `Macintosh.html` | Classic Macintosh-inspired UI |
+| `comodore64.html` | Commodore 64-inspired page |
+| `windows3.11.html` | Windows 3.11-style interface |
+| `windows95.html` | Interactive Windows 95-inspired UI |
+
+---
+
+## ▶️ Run
+
+Open any `.html` file directly in your browser, or launch a simple local server:
+
 ```bash
 git clone https://github.com/Swir/Github_Webste.git
 cd Github_Webste
 python -m http.server 8000
 ```
-Następnie otwórz wybrany plik pod `http://localhost:8000/`.
 
----
+Then open the selected page under:
 
-## 🇬🇧 English
-
-This repository contains a collection of standalone HTML pages styled after classic computers and operating-system interfaces. Each file is an independent UI experiment and can be opened without a build system or dependency installation.
-
-### 🖥️ Available themes
-- `Atari.html`
-- `Macintosh.html`
-- `comodore64.html`
-- `windows3.11.html`
-- `windows95.html`
-
-The `windows95.html` page recreates the familiar Windows 95 visual language and includes interactive retro UI elements.
-
-### 🚀 Run locally
-Open any `.html` file directly in a modern browser, or start a local server:
-```bash
-git clone https://github.com/Swir/Github_Webste.git
-cd Github_Webste
-python -m http.server 8000
+```text
+http://localhost:8000/
 ```
-Then open the desired page under `http://localhost:8000/`.
 
 ---
 
-## 👤 Maintainer / Opiekun repozytorium
-**Swir**
+## 🔍 Discoverability
+
+`retro html ui` • `windows 95 html` • `windows 3.11 web ui` • `commodore 64 html` • `atari website css` • `classic macintosh web interface` • `retro css design` • `vintage computer website`
+
+---
+
+## 👨‍💻 Maintainer
+
+Maintained by **Swir** — [@Swir](https://github.com/Swir)
+
+<div align="center">
+
+### 🕹️ Five classic computer styles • Zero build tools required
+
+⭐ **Star the repository if you enjoy retro web experiments!**
+
+</div>

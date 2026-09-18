@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+<title id="title">Retro UI Collection icon</title><desc id="desc">Dark SWIR icon with five cyan retro window tiles.</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#02050A"/><stop offset="1" stop-color="#07111C"/></linearGradient><linearGradient id="c" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0088FF"/><stop offset="1" stop-color="#62E5FF"/></linearGradient></defs>
+<rect x="4" y="4" width="248" height="248" rx="52" fill="url(#bg)" stroke="#62E5FF" stroke-opacity=".45" stroke-width="4"/>
+<rect x="48" y="54" width="66" height="54" rx="7" fill="none" stroke="url(#c)" stroke-width="6"/><path d="M48 70h66" stroke="#62E5FF" stroke-width="5"/>
+<rect x="142" y="54" width="66" height="54" rx="7" fill="none" stroke="url(#c)" stroke-width="6"/><path d="M142 70h66" stroke="#62E5FF" stroke-width="5"/>
+<rect x="48" y="142" width="66" height="54" rx="7" fill="none" stroke="url(#c)" stroke-width="6"/><path d="M48 158h66" stroke="#62E5FF" stroke-width="5"/>
+<rect x="142" y="142" width="66" height="54" rx="7" fill="none" stroke="url(#c)" stroke-width="6"/><path d="M142 158h66" stroke="#62E5FF" stroke-width="5"/>
+<circle cx="128" cy="128" r="17" fill="#02050A" stroke="#62E5FF" stroke-width="5"/><circle cx="128" cy="128" r="6" fill="#62E5FF"/>
+</svg>
